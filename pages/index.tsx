@@ -84,8 +84,8 @@ export default function Home() {
   };
 
   return (
-    <div className='grid font-overpass text-white min-h-screen items-start bg-no-repeat bg-center bg-cover bg-fixed bg-main'>
-      <motion.div
+    <main className='grid font-overpass text-white min-h-screen items-start bg-no-repeat bg-center bg-cover bg-fixed bg-main'>
+      <motion.section
         variants={headerVariants}
         initial='hidden'
         animate='visible'
@@ -95,7 +95,7 @@ export default function Home() {
           variants={headerVariants}
           className='grid d:text-right d:mr-12 px-10 py-24 t:px-20 t:py-32 d:px-28 gap-5'
         >
-          <motion.p
+          <motion.h1
             variants={headerVariants}
             initial={{ y: -300 }}
             animate={{
@@ -105,7 +105,7 @@ export default function Home() {
             className='text-6xl t:text-7xl font-bold w-3/5 d:w-full tracking-widest'
           >
             KAIXIN HUANG
-          </motion.p>
+          </motion.h1>
           <motion.p
             variants={headerVariants}
             className='t:text-lg tracking-wide font-light'
@@ -114,8 +114,8 @@ export default function Home() {
           </motion.p>
         </motion.header>
         <div className='bg-no-repeat bg-fixed bg-cover bg-intro h-[24.5rem] d:h-[47rem] dl:bg-center w-full'></div>
-      </motion.div>
-      <motion.div
+      </motion.section>
+      <motion.section
         initial={{ opacity: 0, color: "white" }}
         whileInView={{
           opacity: 1,
@@ -123,9 +123,9 @@ export default function Home() {
         }}
         className='grid d:grid-cols-2 text-center d:text-right t:px-20 t:py-20'
       >
-        <p className='text-3xl t:text-4xl d:mr-32 font-semibold tracking-wide px-10 pt-20 '>
+        <h1 className='text-3xl t:text-4xl d:mr-32 font-semibold tracking-wide px-10 pt-20 '>
           About Me
-        </p>
+        </h1>
         <p className='t:text-lg t:leading-9 d:text-left font-light p-10 d:pr-0 leading-8'>
           I am a frontend developer hoping to land a job. Despite the years in
           college heavily focused on data science and statistics, it was that
@@ -134,8 +134,8 @@ export default function Home() {
           React/Next and Tailwind, I have projects ranging from multipage
           websites to CRUD apps.
         </p>
-      </motion.div>
-      <motion.div
+      </motion.section>
+      <motion.section
         initial={{ opacity: 0, color: "white" }}
         whileInView={{
           opacity: 1,
@@ -143,9 +143,9 @@ export default function Home() {
         }}
         className='grid d:grid-cols-2 text-center d:text-right pb-10 t:pb-32'
       >
-        <p className='text-3xl t:text-4xl d:mr-32 font-semibold tracking-wide px-10 pt-10'>
+        <h1 className='text-3xl t:text-4xl d:mr-32 font-semibold tracking-wide px-10 pt-10'>
           Skills and Tools
-        </p>
+        </h1>
         <ul className='grid grid-cols-3 font-light p-10 t:w-4/5 t:mx-auto d:pl-0 d:pr-10 gap-5'>
           {tools.map((tool, index) => {
             return (
@@ -163,11 +163,11 @@ export default function Home() {
             );
           })}
         </ul>
-      </motion.div>
-      <div className='grid d:grid-cols-2 px-10 gap-12 t:gap-20 t:px-20'>
-        <p className='text-3xl t:text-4xl text-center d:text-right d:mr-32 font-semibold tracking-wide'>
+      </motion.section>
+      <section className='grid d:grid-cols-2 px-10 gap-12 t:gap-20 t:px-20'>
+        <h1 className='text-3xl t:text-4xl text-center d:text-right d:mr-32 font-semibold tracking-wide'>
           Projects
-        </p>
+        </h1>
         {projects.map((project, index) => {
           return (
             <motion.li
@@ -181,10 +181,10 @@ export default function Home() {
             >
               <div className='grid d:justify-items-end d:mr-40 gap-2'>
                 <div className='grid grid-cols-2 d:gap-6 d:text-right text-xl font-bold tracking-widest'>
-                  <p className='d:order-last t:text-2xl d:3xl'>
+                  <h2 className='d:order-last t:text-2xl d:3xl'>
                     {" "}
                     {project.name}
-                  </p>
+                  </h2>
                   <ul className='grid grid-flow-col mr-0 mx-auto gap-2 items-center'>
                     {project.tools.map((tool, idx) => {
                       return (
@@ -236,8 +236,8 @@ export default function Home() {
             </motion.li>
           );
         })}
-      </div>
-      <motion.div
+      </section>
+      <motion.section
         initial={{ opacity: 0, color: "white" }}
         whileInView={{
           opacity: 1,
@@ -245,30 +245,10 @@ export default function Home() {
         }}
         className='grid d:grid-cols-2 items-start px-10 gap-10 pb-10 d:pb-20 t:px-20'
       >
-        <div className='grid gap-28 items-start d:text-right d:mr-36'>
-          <p className='text-3xl t:text-4xl font-semibold tracking-wide'>
-            Get In Touch
-          </p>
-          <div className='d:grid gap-10 hidden'>
-            <div className='grid gap-3'>
-              <p className='tracking-widest font-medium'>EMAIL</p>
-              <a className='underline font-extralight tracking-wider'>
-                kaixin1528@gmail.com
-              </a>
-            </div>
-            <div className='grid gap-3'>
-              <p className='tracking-widest font-medium'>PHONE</p>
-              <a className='underline font-extralight tracking-wider'>
-                (626) 382-8126
-              </a>
-            </div>
-            <div className='grid gap-3'>
-              <p className='tracking-widest font-medium'>ELSEWHERE</p>
-              <a className='underline font-extralight'>(626) 382-8126</a>
-            </div>
-          </div>
-        </div>
-        <form className='grid grid-cols-2 d:self-end gap-5 text-sm t:text-base text-black dl:pr-10'>
+        <h1 className='grid gap-28 items-start d:text-right d:mr-36 text-3xl t:text-4xl font-semibold tracking-wide'>
+          Get In Touch
+        </h1>
+        {/* <form className='grid grid-cols-2 d:self-end gap-5 text-sm t:text-base text-black dl:pr-10'>
           <input
             type='text'
             placeholder='Name'
@@ -288,26 +268,26 @@ export default function Home() {
           <button className='text-xs justify-self-start text-white font-semibold px-5 py-3 bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md'>
             SEND MESSAGE
           </button>
-        </form>
-        <div className='grid gap-8 d:hidden'>
+        </form> */}
+        <section className='grid gap-8'>
           <div className='grid gap-3'>
-            <p className='tracking-widest font-medium'>EMAIL</p>
-            <p className='underline font-extralight tracking-wider'>
+            <h4 className='tracking-widest font-medium'>EMAIL</h4>
+            <h4 className='underline font-extralight tracking-wider'>
               kaixin1528@gmail.com
-            </p>
+            </h4>
           </div>
           <div className='grid gap-3'>
-            <p className='tracking-widest font-medium'>PHONE</p>
-            <p className='underline font-extralight tracking-wider'>
+            <h4 className='tracking-widest font-medium'>PHONE</h4>
+            <h4 className='underline font-extralight tracking-wider'>
               (626) 382-8126
-            </p>
+            </h4>
           </div>
           <div className='grid gap-3'>
-            <p className='tracking-widest font-medium'>ELSEWHERE</p>
-            <a className='underline font-extralight'>(626) 382-8126</a>
+            <h4 className='tracking-widest font-medium'>GITHUB</h4>
+            <h4 className='underline font-extralight'>(626) 382-8126</h4>
           </div>
-        </div>
-      </motion.div>
-    </div>
+        </section>
+      </motion.section>
+    </main>
   );
 }
