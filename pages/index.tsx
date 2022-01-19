@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import random from "../public/images/random.jpeg";
 import html from "../public/images/html-logo.svg";
 import css from "../public/images/css-logo.png";
 import javascript from "../public/images/javascript-logo.png";
@@ -10,11 +9,14 @@ import tailwind from "../public/images/tailwind-logo.svg";
 import typescript from "../public/images/typescript-logo.svg";
 import framerMotion from "../public/images/framer-motion.jpeg";
 import mongodb from "../public/images/mongodb-logo.png";
+import github from "../public/images/github-logo.png";
+import linkedin from "../public/images/linkedin-logo.png";
 import { motion } from "framer-motion";
 
 import audiophileHomepage from "../public/images/audiophile-homepage.png";
-import designoHomepage from "../public/images/designo-homepage.png";
 import feedbackHomepage from "../public/images/feedback-homepage.png";
+import trello from "../public/images/trello-clone.png";
+import designoHomepage from "../public/images/designo-homepage.png";
 
 export default function Home() {
   const tools = [
@@ -34,8 +36,8 @@ export default function Home() {
       name: "Audiophile",
       description:
         "Audiophile is a multipage e-commerce website selling imaginative audio products. Using React's state management, a user can add items to the cart and checkout accordingly.",
-      demo: "https://www.google.com/",
-      code: "https://www.google.com/",
+      demo: "https://kaixin-audiophile.netlify.app",
+      code: "https://github.com/kaixin1528/audiophile-e-commerce",
       tools: [react, tailwind, framerMotion],
       screenshots: [audiophileHomepage],
     },
@@ -43,25 +45,26 @@ export default function Home() {
       name: "Product Feedback",
       description:
         "Product Feedback is a multipage CRUD website. By creating a REST API within NextJS, a user can add, delete, update, and read feedback for the product accordingly.",
-      demo: "https://www.google.com/",
-      code: "https://www.google.com/",
+      demo: "https://kaixin-product-feedback.netlify.app",
+      code: "https://github.com/kaixin1528/product-feedback",
       tools: [next, tailwind, typescript, framerMotion],
       screenshots: [feedbackHomepage],
     },
     {
       name: "Trello Clone",
-      description: "Trello clone that...",
+      description:
+        "Trello clone is a CRUD website in which a user can add a new list or card, edit menu description and each card's info, rename and delete a list.",
       demo: "https://www.google.com/",
-      code: "https://www.google.com/",
-      tools: [next, tailwind, typescript, framerMotion],
-      screenshots: [random],
+      code: "https://github.com/kaixin1528/trello-clone",
+      tools: [next, tailwind, mongodb, typescript, framerMotion],
+      screenshots: [trello],
     },
     {
       name: "Designo",
       description:
         "Designo is a multipage website for an imaginative design agency.",
-      demo: "https://www.google.com/",
-      code: "https://www.google.com/",
+      demo: "https://kaixin-designo.netlify.app",
+      code: "https://github.com/kaixin1528/designo",
       tools: [react, tailwind, framerMotion],
       screenshots: [designoHomepage],
     },
@@ -269,8 +272,25 @@ export default function Home() {
             </h4>
           </div>
           <div className='grid gap-3'>
-            <h4 className='tracking-widest font-medium'>GITHUB</h4>
-            <h4 className='underline font-extralight'>(626) 382-8126</h4>
+            <h4 className='tracking-widest font-medium'>ELSEWHERE</h4>
+            <div className='flex gap-5 items-start'>
+              <a
+                href='https://github.com/kaixin1528'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline font-extralight'
+              >
+                <Image src={github} alt='Github'></Image>
+              </a>
+              <a
+                href='https://www.linkedin.com/in/kaixin-huang-30608822b/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline font-extralight h-8 w-8'
+              >
+                <Image src={linkedin} alt='LinkedIn'></Image>
+              </a>
+            </div>
           </div>
         </section>
       </motion.section>
