@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import mountain from "../public/images/bg-mountain.jpeg";
 import random from "../public/images/random.jpeg";
-import fire from "../public/images/fire.jpeg";
 import html from "../public/images/html-logo.svg";
 import css from "../public/images/css-logo.png";
 import javascript from "../public/images/javascript-logo.png";
@@ -11,19 +9,12 @@ import next from "../public/images/next-logo.svg";
 import tailwind from "../public/images/tailwind-logo.svg";
 import typescript from "../public/images/typescript-logo.svg";
 import framerMotion from "../public/images/framer-motion.jpeg";
+import mongodb from "../public/images/mongodb-logo.png";
 import { motion } from "framer-motion";
 
-import audiophilecart from "../public/images/audiophile-cart.png";
 import audiophileHomepage from "../public/images/audiophile-homepage.png";
-import audiophileSpeaker from "../public/images/audiophile-speaker.png";
-
 import designoHomepage from "../public/images/designo-homepage.png";
-import designoDesigns from "../public/images/designo-designs.png";
-import designoOtherDesigns from "../public/images/designo-other-designs.png";
-
 import feedbackHomepage from "../public/images/feedback-homepage.png";
-import feedbackDetail from "../public/images/feedback-detail.png";
-import feedbackCreate from "../public/images/feedback-create.png";
 
 export default function Home() {
   const tools = [
@@ -35,17 +26,10 @@ export default function Home() {
     { logo: tailwind, name: "Tailwind" },
     { logo: typescript, name: "Typescript" },
     { logo: framerMotion, name: "Framer Motion" },
+    { logo: mongodb, name: "MongoDB" },
   ];
 
   const projects = [
-    {
-      name: "Trello Clone",
-      description: "Trello clone that...",
-      demo: "https://www.google.com/",
-      code: "https://www.google.com/",
-      tools: [next, tailwind, typescript, framerMotion],
-      screenshots: [random, fire, mountain],
-    },
     {
       name: "Audiophile",
       description:
@@ -53,16 +37,7 @@ export default function Home() {
       demo: "https://www.google.com/",
       code: "https://www.google.com/",
       tools: [react, tailwind, framerMotion],
-      screenshots: [audiophileHomepage, audiophileSpeaker, audiophilecart],
-    },
-    {
-      name: "Designo",
-      description:
-        "Designo is a multipage website for an imaginative design agency.",
-      demo: "https://www.google.com/",
-      code: "https://www.google.com/",
-      tools: [react, tailwind, framerMotion],
-      screenshots: [designoHomepage, designoOtherDesigns, designoDesigns],
+      screenshots: [audiophileHomepage],
     },
     {
       name: "Product Feedback",
@@ -71,7 +46,24 @@ export default function Home() {
       demo: "https://www.google.com/",
       code: "https://www.google.com/",
       tools: [next, tailwind, typescript, framerMotion],
-      screenshots: [feedbackHomepage, feedbackDetail, feedbackCreate],
+      screenshots: [feedbackHomepage],
+    },
+    {
+      name: "Trello Clone",
+      description: "Trello clone that...",
+      demo: "https://www.google.com/",
+      code: "https://www.google.com/",
+      tools: [next, tailwind, typescript, framerMotion],
+      screenshots: [random],
+    },
+    {
+      name: "Designo",
+      description:
+        "Designo is a multipage website for an imaginative design agency.",
+      demo: "https://www.google.com/",
+      code: "https://www.google.com/",
+      tools: [react, tailwind, framerMotion],
+      screenshots: [designoHomepage],
     },
   ];
 
@@ -177,7 +169,7 @@ export default function Home() {
                 transition: { duration: 1 },
               }}
               key={index}
-              className='grid d:grid-cols-2 d:col-start-1 d:col-span-2 d:items-start gap-5 d:gap-0 t:text-lg'
+              className='grid d:grid-cols-2 d:col-start-1 d:col-span-2 d:items-start gap-5 d:gap-0 pb-24 t:text-lg'
             >
               <div className='grid d:justify-items-end d:mr-40 gap-2'>
                 <div className='grid grid-cols-2 d:gap-6 d:text-right text-xl font-bold tracking-widest'>
@@ -222,15 +214,9 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className='grid grid-cols-2 grid-rows-2 gap-2'>
-                <div className='col-span-2 -mb-2'>
+              <div className='grid grid-cols-2 gap-2 rounded-lg'>
+                <div className='col-span-2 -mb-2 rounded-lg'>
                   <Image src={project.screenshots[0]} alt='intro'></Image>
-                </div>
-                <div className=''>
-                  <Image src={project.screenshots[1]} alt='intro'></Image>
-                </div>
-                <div className=''>
-                  <Image src={project.screenshots[2]} alt='intro'></Image>
                 </div>
               </div>
             </motion.li>
@@ -243,7 +229,7 @@ export default function Home() {
           opacity: 1,
           transition: { duration: 1 },
         }}
-        className='grid d:grid-cols-2 items-start px-10 gap-10 pb-10 d:pb-20 t:px-20'
+        className='grid d:grid-cols-2 items-start px-10 gap-10 d:gap-0 pb-10 d:pb-20 t:px-20'
       >
         <h1 className='grid gap-28 items-start d:text-right d:mr-36 text-3xl t:text-4xl font-semibold tracking-wide'>
           Get In Touch
