@@ -2,10 +2,8 @@
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Links](#links)
+- [Links](#links)
 - [Author](#author)
-- 
 
 Portfolio Website https://kaixin-portfolio.netlify.app
 
@@ -16,6 +14,7 @@ Portfolio Website https://kaixin-portfolio.netlify.app
 - Product Feedback: [Live URL](https://kaixin-product-feedback.netlify.app) | [Github Repo](https://github.com/kaixin1528/product-feedback) 
 - Designo: [Live URL](https://kaixin-designo.netlify.app)  | [Github Repo](https://github.com/kaixin1528/designo) 
  
- 
+ ### Author 
+ Kaixin Huang
  
  
