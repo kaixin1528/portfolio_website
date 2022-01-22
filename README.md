@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Links
 
 - Audiophile: [https://kaixin-audiophile.netlify.app](https://kaixin-audiophile.netlify.app)
-- Trello Clone: [https://kaixin-trello-clone.netlify.app](https://kaixin-trello-clone.netlify.app)
+- Trello Clone: [Github Repo](https://github.com/kaixin1528/trello-clone)
 - Product Feedback: [https://kaixin-product-feedback.netlify.app](https://kaixin-product-feedback.netlify.app)
 - Designo: [https://kaixin-designo.netlify.app](https://kaixin-designo.netlify.app)
  
