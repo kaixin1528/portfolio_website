@@ -1,5 +1,8 @@
 # Portfolio Website
 
+### Resume 
+- [Link to Resume](https://github.com/kaixin1528/portfolio_website/blob/main/resume.pdf)
+
 ### Links
 - Portfolio Website: [Live URL](https://kaixin-portfolio.netlify.app)
   - Audiophile: [Live URL](https://kaixin-audiophile.netlify.app) | [Github Repo](https://github.com/kaixin1528/audiophile-e-commerce) 
