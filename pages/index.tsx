@@ -214,7 +214,7 @@ export default function Home() {
                     target='_blank'
                     rel='noopener noreferrer'
                     className={`${
-                      project.name === "Trello Clone" && "col-start-2"
+                      project.name === "Trello Clone" && "d:col-start-2"
                     } px-5 py-2 font-semibold hover:font-extrabold bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md`}
                   >
                     CODE
