@@ -35,7 +35,7 @@ export default function Home() {
     {
       name: "Audiophile",
       description:
-        "Audiophile is a multipage e-commerce website selling imaginative audio products. Using React's state management, a user can add items to the cart and checkout accordingly.",
+        "Audiophile is a responsive, multipage e-commerce website selling imaginary audio products. Using React's state management, a user can add/remove items to the cart and checkout accordingly.",
       demo: "https://kaixin-audiophile.netlify.app",
       code: "https://github.com/kaixin1528/audiophile-e-commerce",
       tools: [react, tailwind, framerMotion],
@@ -44,7 +44,7 @@ export default function Home() {
     {
       name: "Product Feedback",
       description:
-        "Product Feedback is a multipage CRUD website. By creating a REST API within NextJS, a user can add, delete, update, and read feedback for the product accordingly.",
+        "Product Feedback is a responsive, multipage CRUD website. Using Next's built-in API routes, a user can add, delete, update, and read feedback for the product and interact with the comment section.",
       demo: "https://kaixin-product-feedback.netlify.app",
       code: "https://github.com/kaixin1528/product-feedback",
       tools: [next, tailwind, typescript, framerMotion],
@@ -53,16 +53,15 @@ export default function Home() {
     {
       name: "Trello Clone",
       description:
-        "Trello clone is a CRUD website in which a user can add a new list or card, edit menu description and each card's info, rename and delete a list.",
-      demo: "https://www.google.com/",
+        "Trello clone is a responsive CRUD website. Using Next's built-in API routes and connecting to the MongoDB database, a user can add a new board and within each board add/remove/edit new lists and cards, card descriptions, and comments.",
       code: "https://github.com/kaixin1528/trello-clone",
-      tools: [next, tailwind, mongodb, typescript, framerMotion],
+      tools: [next, tailwind, mongodb, typescript],
       screenshots: [trello],
     },
     {
       name: "Designo",
       description:
-        "Designo is a multipage website for an imaginative design agency.",
+        "Designo is a responsive, multipage website for a design agency focused on creating imaginary responsive, web, and app designs. The layout is CSS-Grid-based for individual preview designs and company information pages.",
       demo: "https://kaixin-designo.netlify.app",
       code: "https://github.com/kaixin1528/designo",
       tools: [react, tailwind, framerMotion],
@@ -80,6 +79,9 @@ export default function Home() {
 
   return (
     <main className='grid font-overpass text-white min-h-screen items-start bg-no-repeat bg-center bg-cover bg-fixed bg-main'>
+      <Head>
+        <title>Kaixin's Portfolio</title>
+      </Head>
       <motion.section
         variants={headerVariants}
         initial='hidden'
@@ -105,10 +107,10 @@ export default function Home() {
             variants={headerVariants}
             className='t:text-lg tracking-wide font-light'
           >
-            A frontend developer looking for a job
+            A frontend developer looking for an entry job
           </motion.p>
         </motion.header>
-        <div className='bg-no-repeat bg-fixed bg-cover bg-intro h-[24.5rem] d:h-[47rem] dl:bg-center w-full'></div>
+        <div className='bg-no-repeat bg-fixed bg-cover bg-intro h-[28rem] d:h-[49rem] dl:bg-center w-full'></div>
       </motion.section>
       <motion.section
         initial={{ opacity: 0, color: "white" }}
@@ -122,12 +124,10 @@ export default function Home() {
           About Me
         </h1>
         <p className='t:text-lg t:leading-9 d:text-left font-light p-10 d:pr-0 leading-8'>
-          I am a frontend developer hoping to land a job. Despite the years in
-          college heavily focused on data science and statistics, it was that
-          one semester class focusing on HTML, CSS, and Javascript that made me
-          more motivated to continue forward in the realm of programming. Using
-          React/Next and Tailwind, I have projects ranging from multipage
-          websites to CRUD apps.
+          I am an aspiring frontend developer looking for an entry job. I have
+          built several responsive websites using React, Next, Tailwind,
+          Javascript and hope to contribute to a highly collaborative work
+          environment and provide customer satisfaction.
         </p>
       </motion.section>
       <motion.section
@@ -142,7 +142,7 @@ export default function Home() {
           Skills and Tools
         </h1>
         <ul className='grid grid-cols-3 font-light p-10 t:w-4/5 t:mx-auto d:pl-0 d:pr-10 gap-5'>
-          {tools.map((tool, index) => {
+          {tools.map((tool: any, index: number) => {
             return (
               <li key={index} className='grid text-center'>
                 <div className='mx-auto'>
@@ -163,7 +163,7 @@ export default function Home() {
         <h1 className='text-3xl t:text-4xl text-center d:text-right d:mr-32 font-semibold tracking-wide'>
           Projects
         </h1>
-        {projects.map((project, index) => {
+        {projects.map((project: any, index: number) => {
           return (
             <motion.li
               initial={{ opacity: 0, color: "white" }}
@@ -181,7 +181,7 @@ export default function Home() {
                     {project.name}
                   </h2>
                   <ul className='grid grid-flow-col mr-0 mx-auto gap-2 items-center'>
-                    {project.tools.map((tool, idx) => {
+                    {project.tools.map((tool: any, idx: number) => {
                       return (
                         <li key={idx} className=''>
                           <Image
@@ -195,7 +195,7 @@ export default function Home() {
                     })}
                   </ul>
                 </div>
-                <p className='font-light d:text-right dl:w-4/5 tracking-wide'>
+                <p className='font-light d:text-right dl:w-5/6 tracking-wide'>
                   {project.description}
                 </p>
                 <div className='grid grid-cols-2 justify-self-start d:justify-self-end text-center text-xs t:text-sm tracking-widest gap-3'>
@@ -203,7 +203,9 @@ export default function Home() {
                     href={project.demo}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='px-5 py-2 font-semibold hover:font-extrabold bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md'
+                    className={`${
+                      project.name === "Trello Clone" && "hidden"
+                    } px-5 py-2 font-semibold hover:font-extrabold bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md`}
                   >
                     LIVE
                   </a>
@@ -211,15 +213,21 @@ export default function Home() {
                     href={project.code}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='px-5 py-2 font-semibold hover:font-extrabold bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md'
+                    className={`${
+                      project.name === "Trello Clone" && "col-start-2"
+                    } px-5 py-2 font-semibold hover:font-extrabold bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md`}
                   >
                     CODE
                   </a>
                 </div>
               </div>
-              <div className='grid grid-cols-2 gap-2 rounded-lg'>
-                <div className='col-span-2 -mb-2 rounded-lg'>
-                  <Image src={project.screenshots[0]} alt='intro'></Image>
+              <div className='grid grid-cols-2 gap-2'>
+                <div className='col-span-2 -mb-2'>
+                  <Image
+                    src={project.screenshots[0]}
+                    alt='intro'
+                    className='rounded-lg'
+                  ></Image>
                 </div>
               </div>
             </motion.li>
@@ -237,39 +245,18 @@ export default function Home() {
         <h1 className='grid gap-28 items-start d:text-right d:mr-36 text-3xl t:text-4xl font-semibold tracking-wide'>
           Get In Touch
         </h1>
-        {/* <form className='grid grid-cols-2 d:self-end gap-5 text-sm t:text-base text-black dl:pr-10'>
-          <input
-            type='text'
-            placeholder='Name'
-            className='px-5 py-2 rounded-md placeholder:tracking-wide tracking-wide focus:outline-none focus:ring-2 focus:ring-red-300'
-          />
-          <input
-            type='text'
-            placeholder='Email'
-            className='px-5 py-2 rounded-md placeholder:tracking-wide tracking-wide focus:outline-none focus:ring-2 focus:ring-red-300'
-          />
-          <textarea
-            name='Message'
-            id='Message'
-            placeholder='Message'
-            className='col-span-2 p-5 h-40 rounded-md placeholder:tracking-wide tracking-wide focus:outline-none resize-none focus:ring-2 focus:ring-red-300'
-          ></textarea>
-          <button className='text-xs justify-self-start text-white font-semibold px-5 py-3 bg-red-300 hover:bg-red-100 hover:ring-2 hover:ring-red-300 hover:text-red-300 shadow-lg shadow-red-300 rounded-md'>
-            SEND MESSAGE
-          </button>
-        </form> */}
         <section className='grid gap-8'>
           <div className='grid gap-3'>
             <h4 className='tracking-widest font-medium'>EMAIL</h4>
-            <h4 className='underline font-extralight tracking-wider'>
+            <p className='underline font-extralight tracking-wider'>
               kaixin1528@gmail.com
-            </h4>
+            </p>
           </div>
           <div className='grid gap-3'>
             <h4 className='tracking-widest font-medium'>PHONE</h4>
-            <h4 className='underline font-extralight tracking-wider'>
+            <p className='underline font-extralight tracking-wider'>
               (626) 382-8126
-            </h4>
+            </p>
           </div>
           <div className='grid gap-3'>
             <h4 className='tracking-widest font-medium'>ELSEWHERE</h4>
@@ -283,7 +270,7 @@ export default function Home() {
                 <Image src={github} alt='Github'></Image>
               </a>
               <a
-                href='https://www.linkedin.com/in/kaixin-huang-30608822b/'
+                href='https://www.linkedin.com/in/kaixin1528'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='underline font-extralight h-8 w-8'
