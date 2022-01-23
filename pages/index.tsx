@@ -110,7 +110,7 @@ export default function Home() {
             A frontend developer looking for an entry job
           </motion.p>
         </motion.header>
-        <div className='bg-no-repeat bg-fixed bg-cover bg-intro h-[28rem] d:h-[49rem] dl:bg-center w-full'></div>
+        <div className='bg-no-repeat bg-fixed bg-cover bg-intro h-[30rem] d:h-[52rem] dl:bg-center w-full'></div>
       </motion.section>
       <motion.section
         initial={{ opacity: 0, color: "white" }}
