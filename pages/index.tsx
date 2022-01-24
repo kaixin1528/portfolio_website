@@ -174,10 +174,9 @@ export default function Home() {
               key={index}
               className='grid d:grid-cols-2 d:col-start-1 d:col-span-2 d:items-start gap-5 d:gap-0 pb-24 t:text-lg'
             >
-              <div className='grid d:justify-items-end d:mr-40 gap-2'>
-                <div className='grid grid-cols-2 d:gap-6 d:text-right text-xl font-bold tracking-widest'>
+              <article className='grid d:justify-items-end d:mr-40 gap-2'>
+                <article className='grid grid-cols-2 d:gap-6 d:text-right text-xl font-bold tracking-widest'>
                   <h2 className='d:order-last t:text-2xl d:3xl'>
-                    {" "}
                     {project.name}
                   </h2>
                   <ul className='grid grid-flow-col mr-0 mx-auto gap-2 items-center'>
@@ -194,11 +193,11 @@ export default function Home() {
                       );
                     })}
                   </ul>
-                </div>
+                </article>
                 <p className='font-light d:text-right dl:w-5/6 tracking-wide'>
                   {project.description}
                 </p>
-                <div className='grid grid-cols-2 justify-self-start d:justify-self-end text-center text-xs t:text-sm tracking-widest gap-3'>
+                <article className='grid grid-cols-2 justify-self-start d:justify-self-end text-center text-xs t:text-sm tracking-widest gap-3'>
                   <a
                     href={project.demo}
                     target='_blank'
@@ -219,9 +218,9 @@ export default function Home() {
                   >
                     CODE
                   </a>
-                </div>
-              </div>
-              <div className='grid grid-cols-2 gap-2'>
+                </article>
+              </article>
+              <article className='grid grid-cols-2 gap-2'>
                 <div className='col-span-2 -mb-2'>
                   <Image
                     src={project.screenshots[0]}
@@ -229,7 +228,7 @@ export default function Home() {
                     className='rounded-lg'
                   ></Image>
                 </div>
-              </div>
+              </article>
             </motion.li>
           );
         })}
@@ -245,22 +244,22 @@ export default function Home() {
         <h1 className='grid gap-28 items-start d:text-right d:mr-36 text-3xl t:text-4xl font-semibold tracking-wide'>
           Get In Touch
         </h1>
-        <section className='grid gap-8'>
-          <div className='grid gap-3'>
+        <article className='grid gap-8'>
+          <article className='grid gap-3'>
             <h4 className='tracking-widest font-medium'>EMAIL</h4>
             <p className='underline font-extralight tracking-wider'>
               kaixin1528@gmail.com
             </p>
-          </div>
-          <div className='grid gap-3'>
+          </article>
+          <article className='grid gap-3'>
             <h4 className='tracking-widest font-medium'>PHONE</h4>
             <p className='underline font-extralight tracking-wider'>
               (626) 382-8126
             </p>
-          </div>
-          <div className='grid gap-3'>
+          </article>
+          <article className='grid gap-3'>
             <h4 className='tracking-widest font-medium'>ELSEWHERE</h4>
-            <div className='flex gap-5 items-start'>
+            <article className='flex gap-5 items-start'>
               <a
                 href='https://github.com/kaixin1528'
                 target='_blank'
@@ -277,9 +276,9 @@ export default function Home() {
               >
                 <Image src={linkedin} alt='LinkedIn'></Image>
               </a>
-            </div>
-          </div>
-        </section>
+            </article>
+          </article>
+        </article>
       </motion.section>
     </main>
   );
